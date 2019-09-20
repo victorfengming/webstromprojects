@@ -1,0 +1,17 @@
+#text{
+    color: #000;
+    font-size: 40px;
+}
+
+#effect{
+    color: fuchsia;
+    font-size: 80px;
+}
+
+#ev{
+    width: 500px;
+    height: 500px;
+    background-color: gold;
+    font-size: 100px;
+    color: #0c80dc;
+}

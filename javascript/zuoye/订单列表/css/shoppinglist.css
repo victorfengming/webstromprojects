@@ -1,0 +1,204 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: verdana, Arial;
+    font-size: 12px;
+    line-height:1;
+    background: #fff;
+}
+
+#head{
+    width: 100%;
+    height: 35px; 
+    position: fixed;
+    background: #f5f5f5;      
+    border-bottom:1px solid #fff;
+}
+
+ul{
+    width: 1000px;
+    height: 35px;
+    list-style: none;
+    text-align:center;
+    margin: 3px auto;
+}
+ul li{
+    position: relative;
+    margin-right: 10px;
+    float: left;    
+    padding: 10px 0;
+    margin-left: 5px;
+}
+a {
+    text-decoration: none;
+    font-size:100%;   
+    color: #6c6c6c;
+    cursor: pointer;
+}
+a:hover{
+    color: #f40;
+    transition: color .2s ease-in-out;
+}
+
+#top-right{
+    float: right;
+    margin: -38px 0 0  0;
+}
+
+.down-icon{  
+    width: 12px;
+    height: 12px;
+    margin-left:5px; 
+    padding-top:3px; 
+}
+.vertical-line{
+    float: left;
+    margin: 0 6px;
+    color: #ccc;
+}
+
+#middle{
+    width: 84%;
+    height: 95px;
+    position: absolute;
+    margin: 45px auto 0 -155px;
+}
+#logo{
+    width: 400px;
+    height: 90px;
+    margin: 10px auto;
+}
+#sousuo{
+    float: right;
+    margin: -95px 0 0 0;
+    border: 3px solid red;
+    width: 435px;
+    height: 32px;
+}
+.search-toggle{
+    float: left;
+    width: 72px;
+    height: 32px;
+    border-right: 1px solid #e5e5e5;
+    border-left: 1px solid #fff;
+    text-align: center;
+    background: #f6f6f6;
+    cursor: pointer;
+    line-height: 32px;
+}
+.sousuo-j{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: url(../image/arrow.png) no-repeat center center;
+}
+.search-in{
+    float: left;
+    width: 363px;
+    margin: -32px 0 0 72px;
+    border: none;
+    background: url(../image/s.png) no-repeat 2% center;
+    height: 32px;
+    line-height: 32px;
+    font-size: 18px;
+}
+.search-but{
+    float: left;
+    width: 95px;
+    height: 38px;
+    border: none;    
+    font-size: 20px;
+    background: #f50;
+    cursor: pointer;
+    color: #fff;
+    line-height: 38px;
+    margin: -35px 0 0 435px;
+}
+
+#content{
+    width: 84%;
+    height: 500px;
+    position: absolute;
+    margin: 140px 0 0 115px;
+    
+}
+.current{
+    color: red;
+    border-bottom: 3px solid red;
+    margin: -2px 0 0 15px;
+}
+#bian{
+    width: 69%;
+    height: 3px;
+    border-bottom: 3px solid #ccc;
+    margin:10px 0 0 300px;
+}
+
+#options{
+    margin: 10px auto;
+    font-weight: bold;
+    font-size: 18px;    
+}
+#options li{
+    width: 120px;
+    height: 30px;
+    cursor: pointer;
+}
+#jiesuan{
+    font-size: 14px;
+    float: right;
+    margin: -40px 180px 0 0;
+}
+#jisuan{
+    width: 55px;
+    height:25px;
+    color:white;
+    background:#aaaaaa;
+    border-radius: 3px;
+    text-align: center;
+}
+#biaoming{
+    width: 100%;
+    height:50px;
+    margin: 0 0 0 20px;
+    text-align: center;
+}
+
+#wulist{
+    width: 100%;
+    margin: 0 0 0 20px;
+    text-align: center;
+}
+#one{
+    height:170px;
+}
+#goods{
+    height:38px;    
+}
+#goodone{
+   border: 1px solid #ccc;
+   background:#fcfcfc;
+   width: 105%;
+   height: 130px;
+}
+
+#tail{
+    width: 69%;
+    height: 50px;
+    background:#e5e5e5;
+    margin: 610px 0 0 302px;
+}
+#tail-left div{
+    margin: 24px 0 0 10px;
+}
+#tail-right{
+    float: right;
+    margin: 10px 30px 0 0px;
+}
+
+#total{
+margin: -10px  -30px 0 0px;
+
+}

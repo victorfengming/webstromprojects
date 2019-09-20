@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>interval</title>
+</head>
+<body>
+    
+<div id="sj" style="width: 900px; height: 270px; font-size: 120px;background:greenyellow;"></div>
+
+<div id="sj2" style="width: 100px; height: 100px; background:cornflowerblue; ">
+
+</div>
+
+<button id="btn1">click me to get time now</button>
+<button id="btn2">biubiubiu</button>
+<button id="btn3">tantantan</button>
+
+<script>
+
+    div_sj = document.getElementById('sj');
+    div_sj2 = document.getElementById('sj2');
+    btn = document.getElementById('btn1');
+    btn2 = document.getElementById('btn2');
+
+    btn.onclick = function () {
+        // console.log(mytime);
+        // console.log(typeof mytime);
+        function updateTime() {
+
+            var myDate = new Date();
+            var mytime = myDate.toLocaleTimeString();     //获取当前时间
+            div_sj.innerHTML = mytime;
+        }
+
+        setInterval(updateTime, 1000);
+    };
+
+    btn2.onclick = function () {
+        console.log(div_sj2);
+        div_sj2.style.borderRadius = "200px";
+    };
+
+    btn3.onclick = function () {
+        var timer;
+        var wid = 0;
+
+        function method2() {
+            var color = "#";
+            for (var i = 0; i < 6; i++) {
+                color += (Math.random() * 16 | 0).toString(16);
+            }
+            return color;
+        }
+
+        function move() {
+            console.log('yidong');
+            // div_sj2.style.width =Math.sin(x);
+            // div_sj2.style.width =1000+900*Math.sin(wid)+'px';
+            div_sj2.style.position = "absolute";
+            div_sj2.style.top = 400 + 300 * Math.sin(wid) + 'px';
+            if (div_sj2.offsetLeft > 2500) {
+                wid = 0;
+            }
+            div_sj2.style.left = 10 * wid + 'px';
+            // div_sj2.style.left = '100px';
+
+            wid += 0.03;
+        }
+
+        timer = setInterval(move, 1);
+    }
+
+</script>
+</body>
+</html>

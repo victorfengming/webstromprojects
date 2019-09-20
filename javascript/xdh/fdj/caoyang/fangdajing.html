@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>放大镜</title>
+</head>
+
+<body>
+    <img id="tu" src="img/1.jpg" alt="">
+</body>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery.mlens-1.7.min.js"></script>
+<script>
+    $(function(){
+        $("#tu").mlens({
+            imgSrc:"img/1.jpg",
+            lensShape:"square",
+            lensSize:300,
+            borderColor:"#123",
+            borderRadius:"30"
+        });
+    });
+</script>
+</html>

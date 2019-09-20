@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+}
+#outer{
+    width: 430px;
+    height: 430px;
+    background-color: red;
+    border-radius: 215px;
+}
+
+#sm{
+    border-radius: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: greenyellow;
+    position: absolute;
+}

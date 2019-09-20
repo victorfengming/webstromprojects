@@ -1,0 +1,31 @@
+$color: #090;
+
+@mixin my_style() {
+
+
+
+}
+
+
+$first-width: 7px;
+$second-width: 14px;
+
+@function adjust_width($n) {
+  @return $n * $first-width + ($n - 1) * $second-width;
+}
+
+@function get_n($num) {
+  @return $num+1;
+}
+
+%father {
+  padding: 4px;
+  margin: 3px;
+  background-color: #999;
+  font-size: 15px;
+
+}
+
+%func1{
+  margin-inside: 30px;
+}

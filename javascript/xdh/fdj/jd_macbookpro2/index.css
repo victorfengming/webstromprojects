@@ -1,0 +1,45 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.img {
+    width: 350px;
+    height: 350px;
+    border: 1px solid #ccc;
+    margin: 100px;
+    position: relative;
+    cursor: move;
+}
+
+.bimg {
+    position: relative;
+    top: -350px;
+    left: 350px;
+    border: 1px solid #ccc;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    display: none;
+}
+
+#move {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(254, 238, 166, 0.5);
+    top: 0px;
+    left: 0px;
+    display: none;
+}
+
+.simg {
+    width: 350px;
+    height: 350px;
+}
+
+.bimg > img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}

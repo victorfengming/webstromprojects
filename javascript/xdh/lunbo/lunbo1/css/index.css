@@ -1,0 +1,80 @@
+*{
+/*    这个通配符选择器是很好性能的*/
+}
+
+.container{
+    width: 590px;
+    height: 470px;
+    border: 20px solid #000;
+    margin: 100px auto;
+    overflow: hidden;
+}
+
+.main{
+    position: absolute;
+    /*position 设置为absolute会向上找父级标签*/
+    left: -85px;
+    width: 4130px;
+    height: 470px;
+/*   设置间隔为0*/
+    font-size: 0;
+    /*overflow: hidden;*/
+}
+
+.list{
+
+    width: 110px;
+    position: relative;
+    bottom: 40px;
+    left: 50%;
+    /*70 / 2*/
+    margin-left: -35px;
+    /*translatex*/
+
+    /*clear kongxi*/
+    font-size: 0;
+    background-color: rgba(255,255,255,0.3);
+    border-radius: 7px;
+    /*margin: 0 auto;*/
+
+}
+
+
+/* xioayuandian*/
+.list li{
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #ccc;
+    margin: 3px;
+}
+
+.list .active{
+    background: orangered;
+}
+
+.container:hover .btn{
+    display: inline-block;
+}
+
+.btn{
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
+    color: #fff;
+    background: rgba(0,0,0,0.3);
+    text-align: center;
+    line-height: 40px;
+}
+
+#prev{
+    left: 0;
+}
+
+#next{
+    right: 0;
+}

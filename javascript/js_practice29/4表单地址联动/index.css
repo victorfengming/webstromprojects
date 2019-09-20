@@ -1,0 +1,26 @@
+
+*{
+    left: 399px;
+    top: 45px;
+}
+
+#main{
+    top: 200px;
+    left: 800px;
+    margin: 0 auto;
+    position: absolute;
+}
+
+p{
+    text-align:  center;
+    font-size: 30px;
+}
+
+.form-control{
+    width: 200px;
+}
+
+#main button{
+    margin: 20px 0px 0px 0px;
+    width: 200px;
+}

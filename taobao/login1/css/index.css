@@ -1,0 +1,131 @@
+body, ul, ol, li, p, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, img, div, dl, dt, dd, input {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 12px;
+}
+
+img {
+    border: none;
+}
+
+li {
+    list-style: none;
+}
+
+input, select, textarea {
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+    color: #6C6C6C;
+
+}
+
+#header{
+    /*padding-top: 22px;*/
+    padding-right: 0px;
+    /*padding-bottom: 22px;*/
+    padding-left: 0px;
+    /*position: relative;*/
+    width: 100%;
+    height: 88px;
+    /*background-color: #ff7a6a;*/
+}
+
+#header .main{
+    margin: 0 auto;
+    width: 1200px;
+    height: 76px;
+    background-color: #ff7a6a;
+}
+
+#content{
+    width: 100%;
+    height: 600px;
+    background-color: #f780ff;
+    background: url("https://img.alicdn.com/tfs/TB1SEY4fQL0gK0jSZFtXXXQCXXa-2500-600.png");
+}
+
+#content .shuru{
+    position: absolute;
+    top: 200px;
+    left: 1300px;
+    width: 350px;
+    height: 350px;
+    background-color: red;
+}
+
+
+#footer{
+    /*background-color: red;*/
+    height: 172px;
+    width: 100%;
+}
+
+#footer div{
+    width: 1200px;
+    margin: 0 auto;
+
+}
+
+
+#footer .top{
+    margin-top: 60px;
+    /*position: absolute;*/
+    top: 100px;
+    /*background-color: #ffe174;*/
+    height: 44px;
+    border-top: 1px solid #404040;
+    border-bottom: 1px solid #404040;
+
+}
+
+#footer .top p a{
+
+
+}
+#footer .top p a{
+    line-height: 36px;
+    text-align: center;
+    /*color: #6C6C6C;*/
+    margin-left:5px;
+    margin-right:5px;
+    /*text-decoration: none;*/
+
+}
+
+#footer .top p a:hover{
+    color: #e24200;
+
+}
+
+#footer .center{
+    /*background-color: blueviolet;*/
+    height: 52px;
+
+}
+
+#footer .center p{
+
+}
+
+#footer .center p em{
+    margin-left: 55px;
+}
+
+#footer .center p a{
+
+    line-height: 36px;
+    text-align: center;
+    margin-left: 5px;
+}
+
+#footer .bottom{
+    /*background-color: #6b9aff;*/
+    height: 41px;
+
+}

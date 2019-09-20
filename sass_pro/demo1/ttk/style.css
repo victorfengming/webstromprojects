@@ -1,0 +1,24 @@
+#outer .first .one {
+  padding: 4px;
+  margin: 3px;
+  background-color: #999;
+  font-size: 15px; }
+
+#outer {
+  height: 100px;
+  background-color: #c03;
+  width: 196px; }
+  #outer .inner {
+    background-color: greenyellow;
+    width: 300px;
+    height: 12px; }
+  #outer .first {
+    width: 20px;
+    height: 30px;
+    background-color: #cc0033; }
+    #outer .first .one {
+      background-color: cornflowerblue;
+      width: 20px;
+      height: 50px; }
+
+/*# sourceMappingURL=style.css.map */

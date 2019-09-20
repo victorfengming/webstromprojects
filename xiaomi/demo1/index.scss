@@ -1,0 +1,84 @@
+li{
+  list-style: none;
+}
+
+#app {
+
+  .main{
+    margin: 0 auto;
+    width: 1226px;
+    //border: 1px solid #000;
+  }
+  .header{
+    width: 100%;
+    height: 140px;
+    //background-color: #ccc;
+    .top-bar{
+      width: 100%;
+      height: 40px;
+      color: #b0b0b0;
+      background-color: #333;
+      .main{
+        .left{
+          float: left;
+          height: 40px;
+          ul{
+            li{
+              height: 40px;
+              text-align: center;
+              margin-left: 5px;
+              float: left;
+            //  TODO 样式
+              a {
+                color: #757575;
+                line-height: 40px;
+                &:hover{
+                  color: #fff;
+                }
+              }
+
+            }
+
+          }
+        }
+        .right{
+          float: right;
+          height: 40px;
+          ul{
+            li{
+              height: 40px;
+              text-align: center;
+              margin-left: 5px;
+              float: left;
+              //  TODO 样式
+              a {
+
+                color: #757575;
+                line-height: 40px;
+                &:hover{
+                  color: #fff;
+                }
+
+              }
+            }
+          }
+        }
+      }
+    }
+    .site-head{
+      width: 100%;
+      height: 100px;
+      background-color: #fff;
+    }
+  }
+  .content{
+    width: 100%;
+    height: 670px;
+    background-color: #e4e7a1;
+  }
+  .detail{
+    width: 100%;
+    height: 6035px;
+    background-color: #cccccc;
+  }
+}

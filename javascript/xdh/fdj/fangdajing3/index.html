@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+	<style type="text/css">
+	*{
+		margin:0px;
+		padding:0px;
+	}
+	.img{
+		width: 400px;
+		height: 400px;
+		border: 1px solid #ccc;
+
+		margin-top: 100px;
+		margin-left: 100px;
+		position: relative;
+		cursor:move;
+	}
+
+	.bimg{
+		position: relative;
+		top: -350px;
+		left: 450px;
+		border: 1px solid #ccc;
+		width: 400px;
+		height: 400px;
+		overflow: hidden;
+		display: none;
+	}
+	#move{
+	  	position: absolute;
+	  	width: 200px;
+	  	height: 200px;
+	  	background: url(1.png) repeat scroll 0 0 transparent;
+	  	top: 0px;
+	  	left: 0px;
+	  	display: none;
+	  }
+	.simg{
+		width: 350px;
+		height: 350px;
+	}
+	.bimg>img{
+	   	position: absolute;
+	   	left: 0px;
+	   	top: 0px;
+	   }
+	.bottom{
+		margin-top: 20px;
+		margin-left: 100px;
+	}
+	 li{
+	 	list-style: none;
+	 	float: left;
+	 	width: 50px;
+	 	height: 50px;
+	 	margin-right: 10px;
+	 }
+	 li img{
+	 	width: 50px;
+	 	height: 50px;
+	 }
+	</style>
+
+</head>
+<body>
+	<div>
+	<div class="img">
+		<div class="simg"><!--小图片-->
+	    	<img src="https://gd2.alicdn.com/imgextra/i2/135329559/O1CN01xoXLQQ2KU4XrB9F1T_!!135329559.jpg_400x400.jpg" style="width:400px;height: 400px;" />
+	    	<div id="move"></div><!--放大区域-->
+	 	</div>
+	    <div class="bimg"><!--大图片-->
+	    	<img src="https://gd2.alicdn.com/imgextra/i2/135329559/O1CN01xoXLQQ2KU4XrB9F1T_!!135329559.jpg_400x400.jpg" style="width:800px;height: 800px;" />
+	    </div>
+
+	</div>
+	<div class="bottom">
+	    	<ul>
+	    		<li id="one"><img id="i" src="https://gd2.alicdn.com/imgextra/i2/135329559/O1CN01xoXLQQ2KU4XrB9F1T_!!135329559.jpg_400x400.jpg" alt=""></li>
+	    		<li id="two"><img id="ii" src="https://gd2.alicdn.com/imgextra/i2/135329559/O1CN01uDtYwH2KU4XudOkRf_!!135329559.jpg_400x400.jpg" alt=""></li>
+	    		<li id="th"><img id="iii" src="https://gd3.alicdn.com/imgextra/i3/135329559/O1CN01n0jQ9p2KU4XqkRESn_!!135329559.jpg_400x400.jpg" alt=""></li>
+
+	    	</ul>
+	</div>
+	</div>
+
+	<script>
+	$(document).ready(function(){
+
+		//鼠标移动到图片显示，移除隐藏
+		$(".img").hover(function(){
+		   	$(".bimg").css("display","block");
+		    $("#move").css("display","block");
+		},function(){
+	  		$(".bimg").css("display","none");
+	  		$("#move").css("display","none");
+	  	});
+		//放大区域移动，大图片移动
+		$("#one").mousemove(function(){
+			console.log($("simg img"));
+			document.getElementsByTagName("img")[0].src=document.getElementById("i").src;
+			document.getElementsByTagName("img")[1].src=document.getElementById("i").src;
+		});
+		$("#two").mousemove(function(){
+			console.log($("simg img"));
+			document.getElementsByTagName("img")[0].src=document.getElementById("ii").src;
+			document.getElementsByTagName("img")[1].src=document.getElementById("ii").src;
+		});
+		$("#th").mousemove(function(){
+			console.log($("simg img"));
+			document.getElementsByTagName("img")[0].src=document.getElementById("iii").src;
+			document.getElementsByTagName("img")[1].src=document.getElementById("iii").src;
+		});
+
+
+
+			$(".img").mousemove(function(event){
+		    var x = event.pageX;
+		    var y = event.pageY;
+		    var nx = x - $(".img").offset().left-$("#move").width()/2;
+		    var ny = y - $(".img").offset().top-$("#move").height()/2;
+		    if(nx < 0){
+		        nx = 0;
+		    }
+		    if(nx > $(".img").width()-$("#move").width()){
+		        nx = $(".img").width()-$("#move").width();
+		    }
+		    if(ny < 0){
+		        ny = 0;
+		    }
+		    if(ny > $(".img").height()-$("#move").height()){
+		        ny = $(".img").height()-$("#move").height();
+		    }
+		    $("#move").css({
+		        left:nx+"px",
+		        top:ny+"px"
+		    });
+		    $(".bimg>img").css({
+		        left:-nx*$(".bimg").width()/$("#move").width()+"px",
+		        top:-ny*$(".bimg").height()/$("#move").height()+"px"
+		    });
+		})
+
+
+	});
+
+
+	</script>
+
+
+</body>
+</html>

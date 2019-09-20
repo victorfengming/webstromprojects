@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播</title>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <style>
+
+        #box{
+            position: relative;
+            width: 936px;
+            height: 316px;
+            cursor: pointer;/*鼠标样式为小手*/
+        }
+
+        li{
+            list-style: none;
+            position: absolute;
+            display: none;
+            top:0px;
+            left:0px;
+        }
+
+        img{
+            width: 936px;
+            height: 316px;
+        }
+
+        .box_box{/*左右箭头底框*/
+            width: 36px;
+            height: 60px;
+            line-height: 60px;/*行高 字体高度 行高=height时垂直居中*/
+            position: absolute;
+            margin-top: -30px;
+            text-align: center;/*居中对齐*/
+            color: #fff;
+        }
+
+        .box_left{
+            left: 0px;
+            top:50%;/*上下居中*/
+            border-radius: 0 5px 5px 0;/*左边箭头底框的右侧圆角*/
+        }
+
+        .box_right{
+            right: 0px;
+            top:50%;
+            border-radius: 5px 0 0 5px;
+        }
+    
+        .box_box:hover{/*伪类选择器，权重10*/
+            background: rgba(7,17,27,0.6);
+        }
+
+        .bottom{
+            position: absolute;
+            bottom: 20px;
+            right: 0px;
+            padding-right: 24px;
+            line-height: 12px;
+            height: 12px;
+        }
+
+        span{
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;/*圆角50%,就是圆形*/
+            background: rgba(7, 17, 27, .8);
+            margin-left: 8px;
+            display: block;
+            float: left;/*左浮动*/
+        }
+    
+        .span{
+            background: #fff;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="box">
+        <ul>
+            <li style="display: block;">
+                <img src="https://img.mukewang.com/5d65e3720001b2c518720632.jpg" alt="">
+            </li>
+            <li>
+                <img src="https://img.mukewang.com/5d6f38c90001e98318720632.jpg" alt="">
+            </li>
+            <li> 
+                <img src="https://img.mukewang.com/5d6cfdd80001e1a118720632.jpg" alt="">
+            </li>
+            <li>
+                <img src="https://img.mukewang.com/5d5b595800017b7f18720632.jpg" alt="">
+            </li>
+            <li>
+                <img src="https://img.mukewang.com/5d5388760001703318720632.jpg" alt="">
+            </li>
+            <li>
+                <img src="https://img.mukewang.com/5d28472e0001f8fb18720632.jpg" alt="">
+            </li>
+        </ul>
+        <div class="box_box box_left"><</div>
+        <div class="box_box box_right">></div>
+        <div class="bottom">
+            <span class="span"></span>
+            <span class=""></span>
+            <span class=""></span>
+            <span class=""></span>
+            <span class=""></span>
+            <span class=""></span>
+        </div>
+    </div>
+
+    <script>
+        var i=0;
+        var lb;
+        //轮播图滚动
+        function lbt(){
+            ++i;
+            if(i==6){
+                i=0;
+            }
+            $("li").eq(i).fadeIn(1000).siblings().fadeOut(1000);//1秒渐显,1秒渐退 :eq()选择器选取带有指定index值的元素 siblings()方法返回被选元素的所有同级元素。
+            $("span").eq(i).addClass("span").siblings().removeClass("span");//向被选元素添加一个或多个类 返回被选元素的所有同级元素 向被选元素移除一个或多个类
+        }
+    
+        lb=setInterval(lbt,1000);
+        //进入图片区域轮播图停止
+		$("#box").hover(function(){
+			clearInterval(lb);//解除计时器
+		},function(){
+			lb=setInterval(lbt,1000);
+		});
+
+
+        //左侧按钮
+        $(".box_left").click(function(){
+            --i;
+            if(i==-1){
+                i=5;
+            }
+            $("li").eq(i).fadeIn(1000).siblings().fadeOut(1000);
+            $("span").eq(i).addClass("span").siblings().removeClass("span");
+        });
+
+        //右侧按钮
+        $(".box_right").click(function(){
+            ++i;
+            if(i==6){
+                i=0;
+            }
+            $("li").eq(i).fadeIn(1000).siblings().fadeOut(1000);
+            $("span").eq(i).addClass("span").siblings().removeClass("span");
+        });
+
+        //底部运动
+        $("span").click(function(){
+            i=$(this).index();
+            $("li").eq(i).fadeIn(1000).siblings().fadeOut(1000);
+            $(this).addClass("span").siblings().removeClass("span");
+        });
+
+    </script>
+
+</body>
+</html>

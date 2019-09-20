@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>手表</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    #box{
+        width: 600px;
+        height: 600px;
+        background: url(img/clock.jpg);
+        margin: 20px;
+        position: relative;
+    }
+
+    #hour, #min, #second{
+        position: absolute;
+        left: 50%;
+        top: 0;
+        width: 30px;
+        height: 600px;
+        margin-left: -15px;
+    }
+
+    #hour{
+        background: url(img/hour.png) no-repeat center;
+    }
+    #min{
+        background: url(img/minute.png) no-repeat center;
+    }
+    #second{
+        background: url(img/second.png) no-repeat center;
+    }
+</style>
+<body>
+    <div id="box">
+        <div id="hour"></div>
+        <div id="min"></div>
+        <div id="second"></div>
+    </div>
+</body>
+<script>
+
+    window.onload = function (ev) {
+        // 获取需要的标签
+        var hour = document.getElementById('hour');
+        var min = document.getElementById('min');
+        var second = document.getElementById('second');
+
+        // 开启定时器
+        setInterval(function () {
+            // 获取当前时间
+            var date = new Date();
+
+            // 转换时分秒
+            var millS = date.getMilliseconds();
+            var s = date.getSeconds() + millS/1000;
+            var m = date.getMinutes() + s/60;
+            var h = date.getHours() + m/60;
+            console.log('s',s);
+            console.log('m',m);
+            console.log('h',h);
+
+            hour.style.transform = 'rotate('+(h/12)*360+'deg)';
+
+            min.style.transform = 'rotate('+(m/60)*360+'deg)';
+
+            second.style.transform = 'rotate('+(s/60)*360+'deg)';
+        })
+    }
+
+</script>
+</html>

@@ -1,0 +1,19 @@
+input{
+    width: 600px;
+    position: absolute;
+    left: 300px;
+    top: 200px;
+    font-size: 80px;
+}
+
+p{
+    font-size: 80px;
+    top: 200px;
+    position: absolute;
+}
+
+#main{
+    left: 300px;
+    position: relative;
+    margin: 0 auto;
+}

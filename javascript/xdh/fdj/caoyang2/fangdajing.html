@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>放大镜</title>
+</head>
+<style>
+    #main{
+        /*实现浏览器水平垂直居中*/
+        position:absolute;
+        top:50%;
+        left:50%;
+        margin-left: -400px;
+        margin-top: -250px;
+        height: 500px;
+        width: 800px;
+
+    }
+
+    #tu{
+        height: 500px;
+        width: 800px;
+        margin: 0 auto;
+        position:relative;
+        top:0px;
+        left:0px;
+    }
+
+    #mlens_target_0 {
+        /*position: fixed;*/
+        left:500px !important;
+        top:500px !important;
+
+
+    }
+
+    #outer{
+
+        height: 500px;
+        width: 1800px;
+
+    }
+
+    #con{
+        position: absolute;
+        left: 1700px;
+        top: 300px;
+        height: 300px;
+        width: 300px;
+        background-color: red;
+    }
+</style>
+<body>
+<div id="outer">
+    <div id="main">
+        <img id="tu" src="img/1.jpg" alt="">
+    </div>
+    <div id="con"></div>
+</div>
+</body>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery.mlens-1.7.min.js"></script>
+<script>
+    // $("#tu").mlens();
+
+    $(
+
+        function(){
+        $("#tu").mlens({
+            imgSrc:"img/1.jpg",//大图的路径
+            lensShape:"square",//放大镜的形状，矩形
+            lensSize:300,//放大镜的大小 ,输入int数字即可， 单位是像素px
+            borderColor:"#123",//放大镜的边框颜色,格式为rgb
+            // borderRadius:"200"//针对矩形放大镜的边框圆角,输入int数字即可，单位px，不支持百分比
+
+
+        });
+    });
+
+</script>
+</html>

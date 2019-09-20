@@ -1,0 +1,25 @@
+#outer {
+    width: 1000px;
+    height: 100px;
+    background-color: #c03;
+}
+
+#outer .inner {
+    background-color: greenyellow;
+    width: 300px;
+    height: 12px;
+}
+
+#outer .first {
+    width: 20px;
+    height: 30px;
+    background-color: cyan;
+}
+
+#outer .first .one {
+    background-color: fuchsia;
+    width: 20px;
+    height: 40px;
+}
+
+/*# sourceMappingURL=index.css.map */

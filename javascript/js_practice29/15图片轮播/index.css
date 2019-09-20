@@ -1,0 +1,67 @@
+body, ul, ol, li, p, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, img, div, dl, dt, dd, input {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    border: none;
+    width: 683px;
+    height: 384px;
+    margin: 0px;
+}
+
+li {
+    list-style: none;
+}
+
+input, select, textarea {
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+#main{
+
+    left: 520px;
+    top: 150px;
+
+    /*border: 5px solid #00c0a5;*/
+    width: 683px;
+    height: 384px;
+    overflow: hidden;
+    position: relative;
+
+}
+
+#full{
+    /*left: -683px;*/
+    width: 13660px;
+    position: absolute;
+}
+
+#side{
+    color: black;
+    font-size: 30px;
+    z-index: 666;
+}
+
+#side>span{
+    font-size: 50px;
+    color:rgba(255,255,0,0.5);
+    position: absolute;
+    top: 350px;
+    cursor: pointer;
+}
+
+
+#side>span:nth-child(1){
+
+    left: 550px;
+}
+
+#side>span:nth-child(2){
+    left: 1150px;
+}
+

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+<!--    定义和用法 <textarea> 标签定义多行的文本输入控件。 文本区中可容纳无限数量的文本，其中的文本的默认字体是等宽字体（通常是 Courier）。 可以通过 cols 和 rows 属性来 -->
+    <textarea name="" id="text" cols="30" rows="10">
+
+    </textarea>
+
+
+
+    <button id="btn">发送</button>
+
+    <script type="text/javascript" src="http://wulv5.com/js/socket.io.min.js"></script>
+
+    <script>
+        var socket = io.connect('/');
+
+        var oText = document.getElementById('text');
+
+        oBtn = document.getElementById('btn');
+
+        oBtn.onclick = function () {
+            var mes = oText.value;
+
+            if(!mes){
+
+                return;
+
+            }
+
+            socket.send(mes);
+
+            oText.value = '';
+
+        }
+
+        socket.on('message', function (mes) {
+            console.log(mes);
+
+            var div = document.createElement('div');
+
+            div.className = 'mes';
+
+            div.innerText = mes;
+
+            document.body.appendChild(div);
+
+        })
+    </script>
+</body>
+</html>

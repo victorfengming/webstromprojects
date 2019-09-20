@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+
+#main{
+    top: 200px;
+    left: 500px;
+    position: absolute;
+}
+
+#menu{
+    border: 1px solid #cccccc;
+}
+
+#menu li{
+    width: 100px;
+    height: 40px;
+    border: 1px solid #cccccc;
+    float: left;
+    /*margin: ;*/
+    text-align: center;
+    background-color: #cccccc;
+    cursor:pointer;
+}
+
+
+#content{
+    position: relative;
+    top: 40px;
+}
+
+
+#content li{
+    width: 510px;
+    height: 300px;
+    float: left;
+    position: absolute;
+    border: 1px solid gray;
+
+}

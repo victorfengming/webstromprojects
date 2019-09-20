@@ -1,0 +1,43 @@
+body, ul, ol, li, p, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, img, div, dl, dt, dd, input {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    border: none;
+    padding-left: 0;
+    margin-right: -4px;
+}
+
+li {
+    list-style: none;
+}
+
+input, select, textarea {
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+#kuang{
+    position: relative;;
+    left: 500px;
+    top: 300px;
+    width: 500px;
+    height: 160px;
+    overflow: hidden;
+    background-color: #00c0a5;
+    border: 5px solid greenyellow;
+}
+
+#tu{
+    /*border: 3px solid rebeccapurple;*/
+    position: absolute;
+    /*overflow: hidden;*/
+    background-color: greenyellow;
+    width: 2600px;
+
+}
+

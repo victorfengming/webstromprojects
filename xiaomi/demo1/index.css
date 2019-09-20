@@ -1,0 +1,54 @@
+li {
+  list-style: none; }
+
+#app .main {
+  margin: 0 auto;
+  width: 1226px; }
+#app .header {
+  width: 100%;
+  height: 140px; }
+  #app .header .top-bar {
+    width: 100%;
+    height: 40px;
+    color: #b0b0b0;
+    background-color: #333; }
+    #app .header .top-bar .main .left {
+      float: left;
+      height: 40px; }
+      #app .header .top-bar .main .left ul li {
+        height: 40px;
+        text-align: center;
+        margin-left: 5px;
+        float: left; }
+        #app .header .top-bar .main .left ul li a {
+          color: #757575;
+          line-height: 40px; }
+          #app .header .top-bar .main .left ul li a:hover {
+            color: #fff; }
+    #app .header .top-bar .main .right {
+      float: right;
+      height: 40px; }
+      #app .header .top-bar .main .right ul li {
+        height: 40px;
+        text-align: center;
+        margin-left: 5px;
+        float: left; }
+        #app .header .top-bar .main .right ul li a {
+          color: #757575;
+          line-height: 40px; }
+          #app .header .top-bar .main .right ul li a:hover {
+            color: #fff; }
+  #app .header .site-head {
+    width: 100%;
+    height: 100px;
+    background-color: #fff; }
+#app .content {
+  width: 100%;
+  height: 670px;
+  background-color: #e4e7a1; }
+#app .detail {
+  width: 100%;
+  height: 6035px;
+  background-color: #cccccc; }
+
+/*# sourceMappingURL=index.css.map */

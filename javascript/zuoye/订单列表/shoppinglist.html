@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/shoppinglist.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+</head>
+<body>
+
+    <div id="head">       
+        <ul id="top-left">
+            <li style="margin: -4px 10px 0 0;">
+                <a href="#">raoweijia789783...
+                    <img src="image/id.png">
+                    <span class="down-icon"><img src="image/arrow.png"></span>
+                </a>
+            </li>
+            <li style="margin: -4px 10px 0 0;">
+                <a href="#"> 
+                    <img src="image/xx.png">         
+                    <span>消息</span>
+                    <span class="down-icon"><img src="image/arrow.png"></a></span>
+            </li>
+            <li><a href="#">手机逛淘宝</a></li>
+        </ul>
+        <ul id="top-right">
+                <li>
+                    <a href="#">淘宝首页</a>
+                </li>
+                <li>
+                        <a href="#">我的淘宝
+                            <span class="down-icon"><img src="image/arrow.png"></span>
+                        </a>
+                </li>
+                <li style="margin: -4px 10px 0 0;">
+                        <img src="image/gouwu.png">
+                        <a href="#">购物车                           
+                            <span class="down-icon"><img src="image/arrow.png"></span>
+                        </a>
+                </li>
+                <li style="margin: -4px 10px 0 0;">
+                        <img src="image/star.png">
+                        <a href="#">收藏夹
+                            <span class="down-icon"><img src="image/arrow.png"></span>
+                        </a>
+                </li>
+                <li>
+                        <a href="#">商品分类</a>
+                        
+                </li>
+                <li>
+                        <span class="vertical-line">|</span>
+                        <a href="#">千牛卖家中心
+                            <span class="down-icon"><img src="image/arrow.png"></span>
+                        </a>
+                </li>
+                <li>
+                        <a href="#">联系客服
+                            <span class="down-icon"><img src="image/arrow.png"></span>
+                        </a>
+                </li>
+                <li style="margin: -4px 10px 0 0;">
+                        <img src="image/liebiao.png">
+                        <a href="#">网站导航
+                            <span class="down-icon"><img src="image/arrow.png"></span>
+                        </a>
+                </li>
+            </ul>      
+    </div>
+
+    <div id="middle">
+        <div id="logo">
+            <img src="image/logo.png">
+        </div>
+        <div id="sousuo">
+                <div   class="search-toggle">
+                        宝贝<span class="sousuo-j"></span>
+                </div>
+                <input class="search-in" id="search" type="text" placeholder="" />
+                <input type="button" class="search-but" value="搜索">
+        </div>
+    </div>
+
+    <div id="content">
+                    <ul id="options">
+                        <li class="current">全部商品</li>
+                       <li style="width: 0;">
+                            <span class="vertical-line" style="font-weight: 100;font: size 12px;">|</span>
+                        </li>
+                        <li>降价商品</li>
+                        <li style="width: 0;">
+                                <span class="vertical-line" style="font-weight: 100;font: size 12px;">|</span>
+                        </li>
+                        <li>库存紧张</li>
+                    </ul>
+                    <div id="bian">
+                        <div id="biankuang"></div>
+                    </div>
+                    <div id="jiesuan">
+                        已选商品（不含运费）<strong style="color: red">0.00</strong><button id="jisuan">结算</button>
+                    </div>
+                    <ul id="cards">
+                        <li> 
+                            <div id="biaoming">
+                                    <div style="height: 50px;width:50px;float: left;"><input type="checkbox" onclick="pp()">&nbsp;&nbsp;全选</div>
+                                    <div style="height: 50px;width:250px;float: left;"> 商品信息</div>
+                                    <div style="height: 50px;width:230px;float: left;"></div>
+                                    <div style="height: 50px;width:120px;float: left;">单价</div>
+                                    <div style="height: 50px;width:120px;float: left;">数量</div>
+                                    <div style="height: 50px;width:120px;float: left;">金额</div>
+                                    <div style="height: 50px;width:120px;float: left;">操作</div>
+                            </div>
+                            <div id="wulist">
+                                    <div id="one">
+                                            <div id="goods">
+                                                    <div style="float: left;padding-top:6px ">
+                                                            <input type="checkbox"><span style="text-align: center;">&nbsp;&nbsp;店铺：一加创华威专卖店</span>
+                                                    </div>                                           
+                                                    <img src="image/dian.png" style="margin-left:-750px; ">
+                                                </div>
+                                                <div id="goodone">
+                                                    <ul style="float: left">
+                                                        <li style="float: left;padding-top:6px;width: 35px;height: 120px;">
+                                                                <input type="checkbox">&nbsp;&nbsp;
+                                                        </li>
+                                                        <li>
+                                                            <div style="width: 302px;height:130px;">
+                                                                <div style="margin: -4px 0 0 -250px;"><img src="image/shouji.jpg"></div>
+                                                                <div style="margin: -80px 0 0 70px;width: 186px;height: 36px;"><a style="cursor: pointer;margin:-50px 0 0 0; ">【现货速发】一加7Pro手机全新正品OnePlus7pro 骁龙855 一加七 6t 1+7T 一</a></div>
+                                                                <div style="margin: 20px 0 0 10px;width: 186px;height: 73px;"><img src="image/baozheng.png"></div>
+                                                            </div>
+                                                        </li>
+                                                        <li style="width: 140px;height:119px">
+                                                                <div style="color: #9c9c9c">机身颜色：曜岩灰<br/>
+                                                                版本类型：中国大陆<br/>                                                           
+                                                                套餐类型：官方标配<br/>                                                              
+                                                                存储容量：6+128GB<br/>                                                              
+                                                                购买方式：购机送</div>
+                                                        </li>
+                                                        <li style="width: 129px;height:119px">  
+                                                            <div style="text-decoration: line-through;color:#9c9c9c;">￥3999.01</div>
+                                                            <div style="margin: 0 0 0 15px;font-weight: bold;">￥3999.00</div>
+                                                        </li>
+                                                        <li style="width: 110px;height:119px"> 
+                                                            <div style="margin: -5px 0 0 0px;"><img src="image/number.png"></div>                                                
+                                                        </li>
+                                                        <li style="width: 110px;height:119px">
+                                                            <div style="margin: 0 0 0 -30px;"><strong style="color: red">￥3999.00</strong></div>
+                                                        </li>
+                                                        <li style="width: 60px;height:119px">
+                                                             <div><a href="#">移入收藏夹</a></div>
+                                                            <div style="margin: 10px 0 0 -35px;"><a href="#">删除</a></div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                    </div>
+                                    <div>
+                                        <div id="goods" style="margin-top:20px;">
+                                            <div style="float: left;padding-top:6px ">
+                                                    <input type="checkbox"><span style="text-align: center;">&nbsp;&nbsp;店铺：茶客之家</span>
+                                            </div>                                           
+                                            <img src="image/dian.png" style="margin-left:-750px; ">
+                                        </div>
+                                        <div id="goodone">
+                                            <ul style="float: left">
+                                                <li style="float: left;padding-top:6px;width: 35px;height: 120px;">
+                                                        <input type="checkbox">&nbsp;&nbsp;
+                                                </li>
+                                                <li>
+                                                    <div style="width: 302px;height:130px;">
+                                                        <div style="margin: -4px 0 0 -250px;"><img src="image/chaye.jpg"></div>
+                                                        <div style="margin: -80px 0 0 70px;width: 186px;height: 36px;"><a style="cursor: pointer;margin:-50px 0 0 0; ">绿茶2019新茶春茶茶叶毛尖茶高山云雾茶叶散装袋装浓香型500g</a></div>
+                                                        <div style="margin: 20px 0 0 10px;width: 186px;height: 73px;"><img src="image/baozheng.png"></div>
+                                                    </div>
+                                                </li>
+                                                <li style="width: 140px;height:119px">
+                                                </li>
+                                                <li style="width: 129px;height:119px">  
+                                                    <div style="text-decoration: line-through;color:#9c9c9c;">￥120</div>
+                                                    <div style="margin: 0 0 0 15px;font-weight: bold;">￥39.80</div>
+                                                </li>
+                                                <li style="width: 110px;height:119px"> 
+                                                    <div style="margin: -5px 0 0 0px;"><img src="image/number.png"></div>                                                
+                                                </li>
+                                                <li style="width: 110px;height:119px">
+                                                    <div style="margin: 0 0 0 -30px;"><strong style="color: red">￥39.80</strong></div>
+                                                </li>
+                                                <li style="width: 60px;height:119px">
+                                                     <div><a href="#">移入收藏夹</a></div>
+                                                    <div style="margin: 10px 0 0 -35px;"><a href="#">删除</a></div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div >
+                                            <div id="goods"  style="margin-top:20px;">
+                                                    <div style="float: left;padding-top:6px ">
+                                                            <input type="checkbox"><span style="text-align: center;">&nbsp;&nbsp;店铺：港翔食品工厂店</span>
+                                                    </div>                                           
+                                                    <img src="image/dian.png" style="margin-left:-750px; ">
+                                                </div>
+                                                <div id="goodone">
+                                                    <ul style="float: left">
+                                                        <li style="float: left;padding-top:6px;width: 35px;height: 120px;">
+                                                                <input type="checkbox">&nbsp;&nbsp;
+                                                        </li>
+                                                        <li>
+                                                            <div style="width: 302px;height:130px;">
+                                                                <div style="margin: -4px 0 0 -250px;"><img src="image/shipin.jpg"></div>
+                                                                <div style="margin: -80px 0 0 70px;width: 186px;height: 36px;"><a style="cursor: pointer;margin:-50px 0 0 0; ">虎纹卷蛋糕零食早餐速食懒人学生吃的面包整箱食品软软糯糯的糕点</a></div>
+                                                                <div style="margin: 20px 0 0 10px;width: 186px;height: 73px;"><img src="image/baozheng.png"></div>
+                                                            </div>
+                                                        </li>
+                                                        <li style="width: 140px;height:119px">
+                                                            <div style="color: #9c9c9c">口味：混合买1斤送1斤</div>
+                                                        </li>
+                                                        <li style="width: 129px;height:119px">  
+
+                                                            <div style="margin: 0 0 0 15px;font-weight: bold;">￥29.80</div>
+                                                        </li>
+                                                        <li style="width: 110px;height:119px"> 
+                                                            <div style="margin: -5px 0 0 0px;"><img src="image/number.png"></div>                                                
+                                                        </li>
+                                                        <li style="width: 110px;height:119px">
+                                                            <div style="margin: 0 0 0 -30px;"><strong style="color: red">￥29.80</strong></div>
+                                                        </li>
+                                                        <li style="width: 60px;height:119px">
+                                                             <div><a href="#">移入收藏夹</a></div>
+                                                            <div style="margin: 10px 0 0 -35px;"><a href="#">删除</a></div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                    </div>
+                                   
+                                                              
+                            </div>
+
+
+                        </li>
+                        <li> </li>
+                        <li> </li>
+                    </ul>
+            <div id="tail">
+                <div id="tail-left">
+                    <div style="height: 50px;width:55px;float: left; margin-top:22px;"><input type="checkbox" onclick="pp()">全选</div>
+                    <div style="height: 50px;width:55px;float: left;"><a>删除</a></div>
+                    <div style="height: 50px;width:70px;float: left;"><a>移入收藏夹</a></div>
+                    <div style="height: 50px;width:55px;float: left;"><a>分享</a></div>
+            
+                </div>
+                <div id="tail-right">
+                    <div style="height: 50px;width:150px;float: left;font-size: 14px;" >已选商品<strong style="color: red;font-size:20px;">0</strong>件                        
+                    </div>
+                    <div style="height: 50px;width:110px;float: left;margin-top:7px;" >合计（不含运费）:</div>                    
+                    <div style="height: 50px;width:105px;float: left;margin-right: -55px;" ><strong style="color: red;font-size:20px;">0.00</strong></div>
+                    <div id="total"style="float: left;"><button style="width: 100px;height: 50px;background:#b0b0b0;" >结算</button></div>
+                </div>
+               
+            </div>
+            
+                   
+            
+    </div>
+<script src="js/shoppinglist.js"></script>
+</body>
+</html>

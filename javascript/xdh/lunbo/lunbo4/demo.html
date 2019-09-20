@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+</head>
+<style type="text/css">
+    img{
+        position: absolute;
+        width: 590px;
+        height: 470px;
+    }
+</style>
+<body>
+<div id="main">
+    <img src="./images/1.jpg">
+    <img src="./images/2.jpg">
+    <img src="./images/3.jpg">
+    <img src="./images/4.jpg">
+    <img src="./images/5.jpg">
+</div>
+<script>
+    var n = 0;
+    function change(){
+        n = n>=5?0:n;
+        $("#main").children().hide();
+        $('#main').children().eq(n).show();
+        n++;
+    }
+    setInterval(change, 500);
+</script>
+</body>
+</html>
